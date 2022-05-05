@@ -61,6 +61,8 @@ public class Movements : MonoBehaviour
         {
             SceneManager.LoadScene("End");
         }
+        
+        
     }
     
 }

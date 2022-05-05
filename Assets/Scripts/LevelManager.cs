@@ -11,7 +11,19 @@ public class LevelManager : MonoBehaviour
     {
         Application.Quit();
     }
-    
-    
-    
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Principal");
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Principal");
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Start");
+    }
 }
