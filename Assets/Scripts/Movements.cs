@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movements : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Movements : MonoBehaviour
     public int speedRotation = 0;
 
     public GameObject key;
+    public GameObject finalWall;
+    public bool caught = false;
     
 
 
@@ -44,7 +47,19 @@ public class Movements : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             _hud.keyScore++;
-            
+            caught = true;
+
+        }
+
+        if (other.gameObject.CompareTag("TriggerZone") && caught == true)
+        {
+            finalWall.transform.Translate(0f,3f,0f);
+            caught = false;
+        }
+
+        if (other.gameObject.CompareTag("EndGame"))
+        {
+            SceneManager.LoadScene("End");
         }
     }
     

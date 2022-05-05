@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - Key
   - Jukebox
+  - TriggerZone
+  - EndGame
   layers:
   - Default
   - TransparentFX
