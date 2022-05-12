@@ -8,6 +8,6 @@ public class GoldenKey : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, 0, speedRotation);
+        transform.Rotate(0, speedRotation, 0);
     }
 }
